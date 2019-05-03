@@ -1,5 +1,97 @@
 /* universal styles */
 
-header {
-  
+body {
+}
+/* header */
+
+div.header {
+  display: flex;
+  justify-content: center;
+}
+
+div.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  color: black;
+  font-size: 18px;
+  width: 960px;
+  background-color: white;
+  z-index: 1;
+  margin-top: 1rem;
+}
+
+div.logo-name {
+  display: flex;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+div.logo-name img {
+  padding-left: 24px;
+  height: 32px;
+}
+
+div.logo-name span {
+  display: flex;
+  align-items: center;
+}
+
+div.navigation li {
+  display: inline-block;
+  padding-right: 2rem;
+}
+
+div.navigation {
+  padding-right: 24px;
+}
+
+ul.nav-menu li {
+  padding-right: 16px;
+}
+
+.truncated-menu {
+  display: none;
+}
+
+@media only screen and (max-width: 700px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .truncated-menu {
+    display: block;
+  }
+
+}
+
+@media only screen and (max-width: 560px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .truncated-menu {
+    display: block;
+  }
+
+  div.logo-name span {
+    display: none;
+    }
+}
+
+/* main banner */
+
+div.main-banner {
+  width: 960px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: lightgray;
+  margin: 0 auto;
+}
+
+div.main-banner-image img {
+  width: 60%;
+  padding: 32px 24px;
 }
