@@ -95,7 +95,6 @@ div.main-banner {
 
 img#banner-pic {
   width: 100%;
-  /*padding: 32px 24px;*/
 }
 
 div.main-banner-image {
@@ -135,7 +134,7 @@ span#start {
 }
 
 /* second section */
-
+/*
 div.second-section {
   width: 960px;
   display: flex;
@@ -147,7 +146,6 @@ div.second-section {
 
 img#second-section-pic {
   width: 100%;
-  /*padding: 32px 24px;*/
 }
 
 div.second-section-image {
@@ -157,20 +155,17 @@ div.second-section-image {
 
 div.second-section-text {
   display: inline-block;
-  width: 40%;
 }
 
-div.second-section-text span {
-  display: inline-block;
-}
 
-span#learn {
+
+span#node-title {
   color: gray;
   font-size: 36px;
   font-weight: bold;
 }
 
-span#latin {
+span#node-info {
   color: gray;
   font-size: 24px;
 }
@@ -182,8 +177,66 @@ span#read-more {
 }
 
 div.information-nodes {
+  width: 40%;
+  display: inline-block;
+}
+
+img#node-pic {
+  width: 35%;
+  height: auto;
+  padding: 18px 18px;
+}
+
+div.second-section-text-blocks {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  width: 65%;
+}
+
+div.second-section-text-blocks span {
+  display: inline-block;
+  font-family: sans-serif;
+}
+*/
+
+/* second container */
+
+div.second-container {
+  width: 960px;
+  margin: 0 auto;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+
+div.second-container-image {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 32px 24px;
+}
+
+
+div.information-nodes {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 40%;
+  align-content: center;
+  height: auto;
+}
+
+div.node-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 65%;
+}
+
+div.information-nodes img {
+  width: 35%;
 }
 
 /* start learning */
