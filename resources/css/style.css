@@ -21,7 +21,8 @@ div.header .container {
   width: 960px;
   background-color: white;
   z-index: 1;
-  margin-top: 1rem;
+  margin-top: 0;
+  position: fixed;
 }
 
 div.logo-name {
@@ -106,6 +107,7 @@ div.main-banner-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 40%;
 }
 
 div.main-banner-text span {
@@ -133,73 +135,6 @@ span#start {
   color: white;
 }
 
-/* second section */
-/*
-div.second-section {
-  width: 960px;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  background-color: white;
-  margin: 0 auto;
-}
-
-img#second-section-pic {
-  width: 100%;
-}
-
-div.second-section-image {
-  margin: 32px 24px;
-  width: 60%;
-}
-
-div.second-section-text {
-  display: inline-block;
-}
-
-
-
-span#node-title {
-  color: gray;
-  font-size: 36px;
-  font-weight: bold;
-}
-
-span#node-info {
-  color: gray;
-  font-size: 24px;
-}
-
-span#read-more {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  color: blue;
-}
-
-div.information-nodes {
-  width: 40%;
-  display: inline-block;
-}
-
-img#node-pic {
-  width: 35%;
-  height: auto;
-  padding: 18px 18px;
-}
-
-div.second-section-text-blocks {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 65%;
-}
-
-div.second-section-text-blocks span {
-  display: inline-block;
-  font-family: sans-serif;
-}
-*/
-
 /* second container */
 
 div.second-container {
@@ -210,33 +145,92 @@ div.second-container {
   align-items: center;
 }
 
-div.second-container-image {
+div.second-container-left-container {
   width: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin: 32px 24px;
+  margin-bottom: 32px;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-top: 32px;
 }
 
+div.second-container-left-container span#practice {
+  color: gray;
+  font-size: 36px;
+  font-weight: bold;
+  padding-bottom: 24px;
+}
+
+div.second-container-left-container span#quote {
+  color: gray;
+  font-size: 18px;
+  padding-bottom: 32px;
+}
+
+div.second-container-left-container span#name {
+  color: gray;
+  font-size: 14px;
+  padding-bottom: 32px;
+}
+
+div.second-container-left-container img#second-container-pic {
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+div.second-container-text {
+  display: flex;
+  flex-direction: column;
+
+}
+
+div.information-nodes-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
 
 div.information-nodes {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  width: 40%;
   align-content: center;
-  height: auto;
+
+}
+
+div.information-nodes-container div#third-child {
+  background-color: lightgray;
+}
+
+div.information-nodes img#node-pic {
+  width: 35%;
+  height: 35%;
+  margin: 16px 16px;
 }
 
 div.node-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 65%;
+  align-items: flex-start;
 }
 
-div.information-nodes img {
-  width: 35%;
+div.node-info span {
+  padding-bottom: 8px;
+}
+
+div.node-info span#node-title {
+  color: gray;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+div.node-info span#node-info {
+  color: black;
+  font-size: 18px;
+}
+
+div.node-info span#read-more {
+  color: blue;
+  font-size: 18px;
 }
 
 /* start learning */
@@ -272,7 +266,7 @@ div.information-nodes img {
   font-family: sans-serif;
   font-size: 36px;
   text-align: center;
-  margin: auto;
+  margin: 0 32px;
   font-weight: bold;
 }
 
@@ -300,4 +294,91 @@ div.information-nodes img {
   font-family: Helvetica;
   text-align: center;
   font-weight: bold;
+}
+
+/* third container */
+
+div.third-container {
+  width: 960px;
+  margin: 0 auto;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+
+div.third-container-left-container {
+  width: 60%;
+  margin-bottom: 32px;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-top: 32px;
+}
+
+div.third-container-left-container span#urban {
+  color: gray;
+  font-size: 36px;
+  font-weight: bold;
+  padding-bottom: 8px;
+}
+
+div.third-container-left-container span#quote {
+  color: gray;
+  font-size: 18px;
+  padding-bottom: 32px;
+}
+
+div.third-container-left-container video#third-container-video {
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+div.third-container-text {
+  display: flex;
+  flex-direction: column;
+
+}
+
+div.exhibit-nodes-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+div.exhibit-nodes {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+
+}
+
+div.exhibit-nodes-container div#third-child {
+  background-color: lightgray;
+}
+
+div.exhibit-nodes img#node-pic {
+  width: 35%;
+  height: 35%;
+  margin: 16px 16px;
+}
+
+div.node-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+div.node-info span {
+  padding-bottom: 8px;
+}
+
+div.node-info span#node-title {
+  color: gray;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+div.node-info span#node-info {
+  color: black;
+  font-size: 18px;
 }
