@@ -1,7 +1,13 @@
 /* universal styles */
 
-body {
-
+h1.container-title {
+  width: 100%
+  color: gray;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 32px;
+  background-color: lightgray;
 }
 
 /* header */
@@ -18,11 +24,11 @@ div.header .container {
   align-content: center;
   color: black;
   font-size: 18px;
-  width: 960px;
   background-color: white;
   z-index: 1;
   margin-top: 0;
   position: fixed;
+  width: 100%;
 }
 
 div.logo-name {
@@ -86,7 +92,6 @@ ul.nav-menu li {
 /* main banner */
 
 div.main-banner {
-  width: 960px;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -138,7 +143,6 @@ span#start {
 /* second container */
 
 div.second-container {
-  width: 960px;
   margin: 0 auto;
   background-color: white;
   display: flex;
@@ -233,77 +237,75 @@ div.node-info span#read-more {
   font-size: 18px;
 }
 
-/* start learning */
+/* still learning container (attempt 2) */
 
-.start-learning {
+div.still-learning-container {
   display: flex;
-  flex-wrap: wrap;
-  width: 960px;
-  padding-top: 70px;
-  align-items: flex-start;
-  justify-content: center;
-  padding-bottom: 70px;
-  margin: 0 auto;
   background-color: lightgray;
-}
-
-.start-learning-images {
-  display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  align-content: space-between;
-  padding-bottom: 10px;
-  padding-top: 20px;
+  justify-content: space-evenly;
+  align-content: center;
   padding-left: 72px;
   padding-right: 72px;
+  padding-top: 32px;
 }
 
-.start-learning-title h2 {
-  color: darkgray;
-  width: 960px;
-  padding: 32px 32px;
-  font-family: sans-serif;
-  font-size: 36px;
-  text-align: center;
-  margin: 0 32px;
-  font-weight: bold;
+div.stil-learning-container h1 {
+  color: gray;
 }
 
-.start-learning-images img {
+div.learning-images {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-bottom: 32px;
+}
+
+div.learning-images img.class-pics {
+  width: 100%;
   height: auto;
-  width: 300px;
-  padding-right: 32px;
 }
 
-.start-learning-images span {
-  display: block;
+div.class-info {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: center;
+  margin-left: 16px;
+  margin-bottom: 24px;
 }
 
-.start-learning-images div {
-  align-items: flex-start;
-}
-
-.start-learning-captions {
-  width: 300px;
-  height: 26px;
-  padding: 5px 5px;
-  color: seashell;
-  background-color: black;
-  font-size: 22px;
-  font-family: Helvetica;
-  text-align: center;
+div.class-info span#class-name {
+  color: gray;
+  font-size: 24px;
   font-weight: bold;
+  padding-top: 16px;
+  padding-bottom: 8px;
+}
+
+div.class-info span#courses {
+  color: gray;
+  font-size: 18px;
+  padding-bottom: 8px;
+
+}
+
+div.class-info span#course-names {
+  color: gray;
+  font-size: 18px;
 }
 
 /* third container */
 
 div.third-container {
-  width: 960px;
   margin: 0 auto;
   background-color: white;
   display: flex;
   align-items: center;
+  border-bottom: 1px;
+  border-bottom-color: lightgray;
+  border-bottom-style: solid;
 }
 
 div.third-container-left-container {
@@ -342,6 +344,7 @@ div.exhibit-nodes-container {
   display: flex;
   flex-direction: column;
   width: 40%;
+  align-content: flex-start;
 }
 
 div.exhibit-nodes {
@@ -351,7 +354,7 @@ div.exhibit-nodes {
 
 }
 
-div.exhibit-nodes-container div#third-child {
+div#first-child {
   background-color: lightgray;
 }
 
@@ -381,4 +384,79 @@ div.node-info span#node-title {
 div.node-info span#node-info {
   color: black;
   font-size: 18px;
+}
+
+/* footer */
+
+div.footer {
+  display: flex;
+  justify-content: center;
+}
+
+div.footer .footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  color: black;
+  font-size: 18px;
+  background-color: white;
+  z-index: 1;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+div.copyright-info {
+  display: flex;
+  padding-top: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 64px;
+}
+
+div.copyright-info span {
+  display: flex;
+  align-items: center;
+}
+
+div.legal li {
+  display: inline-block;
+}
+
+div.legal {
+  padding-right: 24px;
+}
+
+ul.legal-menu li {
+  padding-right: 16px;
+  padding-bottom: 64px;
+}
+
+.truncated-footer {
+  display: none;
+}
+
+@media only screen and (max-width: 700px) {
+  .legal-menu {
+    display: none;
+  }
+
+  .footer-truncated-menu {
+    display: block;
+  }
+
+}
+
+@media only screen and (max-width: 560px) {
+  .legal-menu {
+    display: none;
+  }
+
+  .truncated-footer {
+    display: block;
+  }
+
+  div.copyright-info span {
+    display: none;
+    }
 }
