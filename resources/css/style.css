@@ -60,18 +60,36 @@ ul.nav-menu li {
   padding-right: 16px;
 }
 
-.truncated-menu {
+ul.nav-menu li:hover {
+  background-color: lightgray;
+  transition-property: background-color;
+  transition-delay: 200ms;
+  transition-duration: 450ms;
+  transition-timing-function: ease-in;
+}
+
+.truncated-header {
   display: none;
 }
+
 
 @media only screen and (max-width: 700px) {
   .nav-menu {
     display: none;
   }
 
+  .truncated-header {
+    height: 64px;
+    display: block;
+  }
+
   .truncated-menu {
     display: block;
   }
+
+  div.logo-name {
+    display: none;
+    }
 
 }
 
@@ -80,11 +98,18 @@ ul.nav-menu li {
     display: none;
   }
 
+  .truncated-header {
+    height: 64px;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+  }
+
   .truncated-menu {
     display: block;
   }
 
-  div.logo-name span {
+  div.logo-name {
     display: none;
     }
 }
@@ -140,6 +165,38 @@ span#start {
   color: white;
 }
 
+@media only screen and (max-width: 700px) {
+  div.main-banner {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: auto;
+  }
+
+  div.main-banner-image {
+    width: 100%;
+  }
+
+  div.main-banner-text {
+    padding: 32px 0;
+  }
+
+  div.main-banner-text span#latin {
+    padding-bottom: 24px;
+  }
+
+  div.main-banner-text span {
+    padding-left: 16px;
+  }
+}
+
+  @media only screen and (max-width: 560px) {
+    div.main-banner {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+}
 /* second container */
 
 div.second-container {
@@ -297,6 +354,10 @@ div.class-info span#course-names {
 }
 
 /* third container */
+
+h1#thesis-title {
+  background-color: white;
+}
 
 div.third-container {
   margin: 0 auto;
