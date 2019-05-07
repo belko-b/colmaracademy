@@ -68,10 +68,42 @@ ul.nav-menu li:hover {
   transition-timing-function: ease-in;
 }
 
-.truncated-header {
+div.header div.truncated-navigation {
   display: none;
 }
 
+@media only screen and (max-width: 700px) {
+  ul.nav-menu {
+    display: none;
+  }
+
+}
+
+@media only screen and (min-width: 460px) {
+  ul.truncated-menu {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  div.header div.truncated-navigation {
+    display: flex;
+  }
+
+  div.header ul.truncated-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    width: 100%;
+  }
+
+  div.logo-name {
+    display: none;
+  }
+}
+
+/*
 
 @media only screen and (max-width: 700px) {
   .nav-menu {
@@ -114,6 +146,8 @@ ul.nav-menu li:hover {
     }
 }
 
+*/
+
 /* main banner */
 
 div.main-banner {
@@ -141,7 +175,7 @@ div.main-banner-text {
 }
 
 div.main-banner-text span {
-  width: 75%;
+  width: auto;
   margin-bottom: 24px;
   font-family: sans-serif;
 }
@@ -165,6 +199,26 @@ span#start {
   color: white;
 }
 
+@media only screen and (max-width: 800px) {
+  div.main-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-color: lightgray;
+
+  }
+
+  div.main-banner img#banner-pic {
+    width: 100%;
+  }
+
+  div.main-banner-image {
+    width: 100%;
+    margin: 32px 0;
+  }
+}
+/*
 @media only screen and (max-width: 700px) {
   div.main-banner {
     display: flex;
@@ -196,7 +250,7 @@ span#start {
       flex-direction: column;
       width: 100%;
     }
-}
+} */
 /* second container */
 
 div.second-container {
