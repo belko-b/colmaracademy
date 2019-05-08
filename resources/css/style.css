@@ -1,8 +1,8 @@
 /* universal styles */
 
 h1.container-title {
-  width: 100%
-  color: gray;
+  width: 100%;
+  color: rgb(51, 55, 58);
   font-size: 36px;
   font-weight: bold;
   text-align: center;
@@ -15,6 +15,7 @@ h1.container-title {
 div.header {
   display: flex;
   justify-content: center;
+
 }
 
 div.header .container {
@@ -29,6 +30,9 @@ div.header .container {
   margin-top: 0;
   position: fixed;
   width: 100%;
+  border-bottom-width: 1px;
+  border-bottom-color: black;
+  border-bottom-style: solid;
 }
 
 div.logo-name {
@@ -175,13 +179,13 @@ div.main-banner-text {
 }
 
 div.main-banner-text span {
-  width: auto;
+  width: 50%;
   margin-bottom: 24px;
   font-family: sans-serif;
 }
 
 span#learn {
-  color: gray;
+  color: rgb(51, 55, 58);
   font-size: 36px;
   font-weight: bold;
 }
@@ -194,9 +198,10 @@ span#latin {
 span#start {
   padding-top: 8px;
   padding-bottom: 8px;
-  background-color: darkgray;
+  background-color: rgb(51, 55, 58);
   text-align: center;
   color: white;
+  font-size: 24px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -269,7 +274,7 @@ div.second-container-left-container {
 }
 
 div.second-container-left-container span#practice {
-  color: gray;
+  color: rgb(51, 55, 58);
   font-size: 36px;
   font-weight: bold;
   padding-bottom: 24px;
@@ -332,20 +337,20 @@ div.node-info span {
   padding-bottom: 8px;
 }
 
-div.node-info span#node-title {
-  color: gray;
-  font-size: 24px;
+div.information-nodes div.node-info  span#node-title {
+  color: rgb(51, 55, 58);
+  font-size: 28px;
   font-weight: bold;
 }
 
 div.node-info span#node-info {
   color: black;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 div.node-info span#read-more {
-  color: blue;
-  font-size: 18px;
+  color: rgb(32, 139, 219);
+  font-size: 24px;
 }
 
 /* still learning container (attempt 2) */
@@ -388,8 +393,8 @@ div.class-info {
 }
 
 div.class-info span#class-name {
-  color: gray;
-  font-size: 24px;
+  color: rgb(51, 55, 58);
+  font-size: 28px;
   font-weight: bold;
   padding-top: 16px;
   padding-bottom: 8px;
@@ -397,14 +402,14 @@ div.class-info span#class-name {
 
 div.class-info span#courses {
   color: gray;
-  font-size: 18px;
+  font-size: 24px;
   padding-bottom: 8px;
 
 }
 
 div.class-info span#course-names {
   color: gray;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 /* third container */
@@ -491,14 +496,14 @@ div.node-info span {
 }
 
 div.node-info span#node-title {
-  color: gray;
-  font-size: 24px;
+  color: rgb(51, 55, 58);
+  font-size: 28px;
   font-weight: bold;
 }
 
 div.node-info span#node-info {
-  color: black;
-  font-size: 18px;
+  color: gray;
+  font-size: 24px;
 }
 
 /* footer */
@@ -540,6 +545,7 @@ div.legal li {
 
 div.legal {
   padding-right: 24px;
+  padding-top: 16px;
 }
 
 ul.legal-menu li {
