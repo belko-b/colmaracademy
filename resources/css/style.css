@@ -31,7 +31,7 @@ div.header .container {
   position: fixed;
   width: 100%;
   border-bottom-width: 1px;
-  border-bottom-color: black;
+  border-bottom-color: lightgray;
   border-bottom-style: solid;
 }
 
@@ -53,7 +53,6 @@ div.logo-name span {
 
 div.navigation li {
   display: inline-block;
-  padding-right: 2rem;
 }
 
 div.navigation {
@@ -61,7 +60,7 @@ div.navigation {
 }
 
 ul.nav-menu li {
-  padding-right: 16px;
+  margin-right: 16px;
 }
 
 ul.nav-menu li:hover {
@@ -107,51 +106,6 @@ div.header div.truncated-navigation {
   }
 }
 
-/*
-
-@media only screen and (max-width: 700px) {
-  .nav-menu {
-    display: none;
-  }
-
-  .truncated-header {
-    height: 64px;
-    display: block;
-  }
-
-  .truncated-menu {
-    display: block;
-  }
-
-  div.logo-name {
-    display: none;
-    }
-
-}
-
-@media only screen and (max-width: 560px) {
-  .nav-menu {
-    display: none;
-  }
-
-  .truncated-header {
-    height: 64px;
-    display: flex;
-    justify-content: space-around;
-    align-content: center;
-  }
-
-  .truncated-menu {
-    display: block;
-  }
-
-  div.logo-name {
-    display: none;
-    }
-}
-
-*/
-
 /* main banner */
 
 div.main-banner {
@@ -179,7 +133,7 @@ div.main-banner-text {
 }
 
 div.main-banner-text span {
-  width: 50%;
+  width: 100%;
   margin-bottom: 24px;
   font-family: sans-serif;
 }
@@ -204,7 +158,16 @@ span#start {
   font-size: 24px;
 }
 
-@media only screen and (max-width: 800px) {
+span#start:hover {
+  transition-property: background-color;
+  transition-duration: 750ms;
+  transition-delay: 150ms;
+  transition-timing-function: ease-in-out;
+  background-color: red;
+}
+
+@media only screen and (max-width: 700px) {
+
   div.main-banner {
     display: flex;
     flex-direction: column;
@@ -222,40 +185,45 @@ span#start {
     width: 100%;
     margin: 32px 0;
   }
-}
-/*
-@media only screen and (max-width: 700px) {
-  div.main-banner {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    width: auto;
-  }
 
-  div.main-banner-image {
+  div.main-banner-text {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+
+  div.main-banner-text {
     width: 100%;
   }
 
-  div.main-banner-text {
-    padding: 32px 0;
-  }
-
-  div.main-banner-text span#latin {
-    padding-bottom: 24px;
-  }
-
   div.main-banner-text span {
-    padding-left: 16px;
+    width: 100%;
+    margin-bottom: 24px;
+    font-family: sans-serif;
+  }
+
+  span#learn {
+    color: rgb(51, 55, 58);
+    font-size: 36px;
+    font-weight: bold;
+  }
+
+  span#latin {
+    color: gray;
+    font-size: 24px;
+  }
+
+  span#start {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: rgb(51, 55, 58);
+    text-align: center;
+    color: white;
+    font-size: 24px;
   }
 }
 
-  @media only screen and (max-width: 560px) {
-    div.main-banner {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    }
-} */
 /* second container */
 
 div.second-container {
@@ -353,7 +321,90 @@ div.node-info span#read-more {
   font-size: 24px;
 }
 
-/* still learning container (attempt 2) */
+div.second-container-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+
+  div.information-nodes div.node-info  span#node-title {
+    color: rgb(51, 55, 58);
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  div.information-nodes div.node-info span#node-info {
+    color: black;
+    font-size: 16px;
+  }
+
+  div.node-info span#read-more {
+    color: rgb(32, 139, 219);
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+
+  div.second-container-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding-top: 16px;
+  }
+
+  div.information-nodes-mobile {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 64px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  div.information-nodes-mobile img#node-pic-mobile {
+    width: 100%;
+    height: 35%;
+  }
+
+  div.node-info-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 16px;
+    padding-top: 32px;
+  }
+
+  div.node-info-mobile span {
+    text-align: left;
+    padding-left: 16px;
+    padding-top: 16px;
+  }
+
+  div.information-nodes-mobile div.node-info-mobile  span#node-title-mobile {
+    color: rgb(51, 55, 58);
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  div.node-info-mobile span#node-info-mobile {
+    color: black;
+    font-size: 24px;
+  }
+
+  div.node-info-mobile span#read-more-mobile {
+    color: rgb(32, 139, 219);
+    font-size: 24px;
+  }
+
+  div.second-container {
+    display: none;
+  }
+}
+
+/* still learning container*/
 
 div.still-learning-container {
   display: flex;
@@ -392,6 +443,14 @@ div.class-info {
   margin-bottom: 24px;
 }
 
+div.learning-images:hover {
+  transition-property: background-color;
+  transition-duration: 500ms;
+  transition-delay: 100ms;
+  transition-timing-function: ease-in-out;
+  background-color: rgb(206, 225, 255);
+}
+
 div.class-info span#class-name {
   color: rgb(51, 55, 58);
   font-size: 28px;
@@ -410,6 +469,92 @@ div.class-info span#courses {
 div.class-info span#course-names {
   color: gray;
   font-size: 24px;
+}
+
+div.still-learning-container-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+
+  div.class-info span#class-name {
+    color: rgb(51, 55, 58);
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 16px;
+    padding-bottom: 8px;
+  }
+
+  div.class-info span#courses {
+    color: gray;
+    font-size: 16px;
+    padding-bottom: 8px;
+
+  }
+
+  div.class-info span#course-names {
+    color: gray;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+
+  div.class-info span#class-name {
+    color: rgb(51, 55, 58);
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 16px;
+    padding-bottom: 8px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  div.still-learning-container-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 32px;
+  }
+
+  div.still-learning-container-mobile span {
+    text-align: left;
+    background-color: lightgray;
+    margin-bottom: 8px;
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-bottom: 24px;
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(51, 55, 58);
+  }
+
+  div.still-learning-container-mobile span:hover {
+    transition-property: background-color;
+    transition-duration: 450ms;
+    transition-delay: 50ms;
+    transition-timing-function: ease-in-out;
+    background-color: rgb(255, 102, 102);
+  }
+
+  div.still-learning-container-mobile span#soft-eng {
+    margin-top: 16px;
+  }
+
+  h1#start-learning-title {
+    padding-bottom: 16px;
+    background-color: white;
+    padding-top: 0px;
+  }
+
+  div.still-learning-container {
+    display: none;
+  }
+
+  div.still-learning-container div.learning-images {
+    display: none;
+  }
 }
 
 /* third container */
@@ -506,6 +651,42 @@ div.node-info span#node-info {
   font-size: 24px;
 }
 
+div.third-container-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+
+  div.node-info span#node-title {
+    color: rgb(51, 55, 58);
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  div.node-info span#node-info {
+    color: gray;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+
+  div.third-container {
+    display: none;
+  }
+
+  div.third-container-mobile {
+    display: block;
+  }
+
+  div.third-container-mobile video {
+    width: 100%;
+    height: auto;
+    padding-top: 16px;
+    padding-bottom: 24px;
+  }
+}
+
 /* footer */
 
 div.footer {
@@ -553,7 +734,7 @@ ul.legal-menu li {
   padding-bottom: 64px;
 }
 
-.truncated-footer {
+.footer-mobile {
   display: none;
 }
 
@@ -566,18 +747,27 @@ ul.legal-menu li {
     display: block;
   }
 
+  div.footer-mobile {
+    display: none;
+  }
+
 }
 
-@media only screen and (max-width: 560px) {
-  .legal-menu {
+@media only screen and (max-width: 460px) {
+
+  div.footer div.footer-container {
     display: none;
   }
 
-  .truncated-footer {
+  div.footer-mobile {
     display: block;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 
-  div.copyright-info span {
-    display: none;
-    }
+  div.footer {
+    border-top: 1px;
+    border-color: lightgray;
+    border-style: solid;
+  }
 }
